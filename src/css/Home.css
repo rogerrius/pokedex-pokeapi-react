@@ -1,0 +1,51 @@
+body {
+    background-color: aliceblue;
+}
+
+.Home {
+    width: auto;
+    height: auto;
+}
+
+.divcaixes {
+    background-color: rgb(220, 220, 220);
+    margin: 20px;
+    border-color: rgb(255, 255, 255);
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 22px;
+    padding: 5px;
+    box-shadow: 1px 3px 3px rgb(119, 119, 119);
+}
+
+.divnom {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.foto {
+    width: 160px;
+    margin: -10px;
+}
+
+.divtipusid {
+    display: flex;
+    justify-content: center;
+}
+
+.divtipus {
+    margin: 5px;
+}
+
+.tipus1 {
+    background-color: bisque;
+}
+
+.tipus2 {
+    background-color: rgb(255, 255, 255);
+}
+
+.divid {
+    background-color: bisque;
+}
