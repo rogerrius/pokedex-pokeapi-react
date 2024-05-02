@@ -39,6 +39,10 @@ const Home = ({n_gen}) => {
         }
     }, []);
 
+    const handlePokemonClick = (id) => {
+        window.location.href = `/pokemon/${id}`;
+    };
+    
     return (
 
         <div className="Jutgol">
@@ -46,26 +50,23 @@ const Home = ({n_gen}) => {
 
                 {pokemon && pokemon.map((poke, index) => (
 
-                    <div className="Home" key={index}>
+                    <div className="Home" key={index} onClick={() => handlePokemonClick(poke.id)}>
                         <div className="divcaixes">
                             
                             <div className="divnom">
                                 <p className='nom'>{poke.name}</p>
+                                <div className='buit'></div>
+                                <p className="id">#{poke.id}</p>
                             </div>
 
                             <div className='divambdivs'>
                                 <div className="divfotos">
-                                    <img className='foto' src={poke.sprites.front_default} alt={poke.name} />
+                                    <img className='foto' src={poke.sprites.other.dream_world.front_default} alt={poke.name} />
                                 </div>
 
-                                <div className="divtipusid">
-                                    <div className="divtipus">
+                                <div className="divtipus">
                                         <p className='tipus1'>{poke.types[0].type.name}</p>
                                         <p className='tipus2'>{poke?.types[1]?.type?.name}</p>
-                                    </div>
-                                    <div className="divid">
-                                        <p className="id">Nº {poke.id}</p>
-                                    </div>
                                 </div>
                             </div>
 

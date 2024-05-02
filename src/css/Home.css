@@ -11,7 +11,7 @@ body {
     background-color: rgb(220, 220, 220);
     margin: 20px;
     border-color: rgb(255, 255, 255);
-    border-width: 10px;
+    border-width: 8px;
     border-style: solid;
     border-radius: 22px;
     padding: 5px;
@@ -22,30 +22,29 @@ body {
     text-transform: capitalize;
     font-weight: bold;
     font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.id {
+    color: grey;
+    font-size: 20px;
+}
+
+.buit {
+    width: 10px;
 }
 
 .foto {
-    width: 160px;
-    margin: -10px;
-}
-
-.divtipusid {
-    display: flex;
-    justify-content: center;
+    max-width: 100px;
 }
 
 .divtipus {
     margin: 5px;
-}
-
-.tipus1 {
-    background-color: bisque;
-}
-
-.tipus2 {
-    background-color: rgb(255, 255, 255);
-}
-
-.divid {
-    background-color: bisque;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 }
