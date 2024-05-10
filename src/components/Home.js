@@ -17,6 +17,27 @@ const Home = ({n_gen}) => {
         'https://pokeapi.co/api/v2/pokemon?limit=120&offset=905'//9
     ]
 
+    const tipoColorDict = {
+        "normal": "rgb(168, 167, 122)",
+        "fire": "rgb(238, 129, 48)",
+        "water": "rgb(99, 144, 240)",
+        "electric": "rgb(247, 208, 44)",
+        "grass": "rgb(122, 199, 76)",
+        "ice": "rgb(150, 217, 214)",
+        "fighting": "rgb(194, 46, 40)",
+        "poison": "rgb(163, 62, 161)",
+        "ground": "rgb(226, 191, 101)",
+        "flying": "rgb(169, 143, 243)",
+        "psychic": "rgb(249, 85, 135)",
+        "bug": "rgb(166, 185, 26)",
+        "rock": "rgb(182, 161, 54)",
+        "ghost": "rgb(115, 87, 151)",
+        "dragon": "rgb(111, 53, 252)",
+        "dark": "rgb(112, 87, 70)",
+        "steel": "rgb(183, 183, 206)", 
+        "fairy": "rgb(214, 133, 173)"
+    };
+
     useEffect(() => {
         const getPokemon = async () => {
             const { result } = await getElements(gen[n_gen]);
@@ -46,13 +67,13 @@ const Home = ({n_gen}) => {
     return (
 
         <div className="Jutgol">
-            <div className="caixapotent">
 
                 {pokemon && pokemon.map((poke, index) => (
 
                     <div className="Home" key={index} onClick={() => handlePokemonClick(poke.id)}>
-                        <div className="divcaixes">
-                            
+                    
+                        <div className="divcaixes" style={ { backgroundColor: tipoColorDict[poke.types[0].type.name] }}>
+
                             <div className="divnom">
                                 <p className='nom'>{poke.name}</p>
                                 <div className='buit'></div>
@@ -63,18 +84,21 @@ const Home = ({n_gen}) => {
                                 <div className="divfotos">
                                     <img className='foto' src={poke.sprites.other.dream_world.front_default} alt={poke.name} />
                                 </div>
-
+                            
                                 <div className="divtipus">
-                                        <p className='tipus1'>{poke.types[0].type.name}</p>
-                                        <p className='tipus2'>{poke?.types[1]?.type?.name}</p>
+                                    {/* <p className='tipus1' style={ { backgroundColor: tipoColorDict[poke.types[0].type.name] }} >{poke.types[0].type.name}</p>
+                                    <p className='tipus2' style={ { backgroundColor: tipoColorDict[poke?.types[1]?.type.name] }} >{poke?.types[1]?.type?.name}</p> */}
+                                    {poke.types.map((i) => (
+                                        <p className='tipus1' style={ { backgroundColor: tipoColorDict[i.type.name] }} >{i.type.name}</p>
+                                    ))}
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
+
                     </div>
                 ))}
             </div>
-        </div>
     );
 };
 

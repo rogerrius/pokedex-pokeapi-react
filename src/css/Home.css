@@ -2,26 +2,45 @@ body {
     background-color: aliceblue;
 }
 
+.Jutgol {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 1px;
+    margin: 12px;
+}
+
 .Home {
-    width: auto;
-    height: auto;
+    width: 100%;
+    max-width: 170px;
+    max-height: 210px;
+    height: 200px;
+    margin-left: 5px;
 }
 
 .divcaixes {
     background-color: rgb(220, 220, 220);
-    margin: 20px;
-    border-color: rgb(255, 255, 255);
-    border-width: 8px;
-    border-style: solid;
-    border-radius: 22px;
-    padding: 5px;
-    box-shadow: 1px 3px 3px rgb(119, 119, 119);
+    margin: 1px;
+    padding: 1px;
+    
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    min-height: 180px;
+    border-radius: 20px;
+
+    border: 1.5px;
+    border-style: ridge;
+    border-color: rgb(98, 98, 98);
 }
 
 .divnom {
     text-transform: capitalize;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 14px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +48,7 @@ body {
 
 .id {
     color: grey;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .buit {
@@ -37,14 +56,37 @@ body {
 }
 
 .foto {
-    max-width: 100px;
+    max-height: 80px;
+    min-height: 80px;
+    max-width: 80px;
 }
 
 .divtipus {
-    margin: 5px;
+    margin: 0px;
     text-transform: capitalize;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: auto;
+}
+
+.tipus1 {
+    background-color: white;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 1px;
+    border-style: ridge;
+    padding: 3px;
+}
+
+.tipus2 {
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 1px;
+    border-style: ridge;
+    padding: 3px;
 }

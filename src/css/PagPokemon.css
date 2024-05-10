@@ -1,3 +1,82 @@
 body {
     background-color: aliceblue;
 }
+
+.divambmoltsdivs {
+    background-color:  rgb(98, 160, 6);
+    height: 85vh;
+    overflow-y: scroll;
+}
+
+.divambfotos {
+    background-color: rgb(98, 160, 6);
+    height: 230px;
+}
+
+.fotospoke {
+    margin-top: 65px;
+    width: auto;
+    height: 190px;
+}
+
+.tensada {
+    width: auto;
+    background-color: aliceblue;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    height: 70vh;
+}
+
+.divambnom {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+}
+
+.id {
+    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: -15px;
+}
+
+.noms {
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.divambtipus {
+    display: flex;
+    justify-content: space-around;
+    text-transform: capitalize;
+}
+
+.descripcio {
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.infopoke {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.infopoke .pes .svgpes {
+    margin-right: 4px;
+    width: 15px;
+}
+
+.infopoke .alt .svgalt {
+    margin-right: 3px;
+    width: 15px;
+}
+
+.divambstats {
+}
