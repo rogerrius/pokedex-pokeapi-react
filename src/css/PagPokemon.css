@@ -3,18 +3,16 @@ body {
 }
 
 .divambmoltsdivs {
-    background-color:  rgb(98, 160, 6);
     height: 85vh;
     overflow-y: scroll;
 }
 
 .divambfotos {
-    background-color: rgb(98, 160, 6);
-    height: 230px;
+    height: 200px;
 }
 
 .fotospoke {
-    margin-top: 65px;
+    margin-top: 45px;
     width: auto;
     height: 190px;
 }
@@ -24,11 +22,11 @@ body {
     background-color: aliceblue;
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
-    height: 70vh;
+    height: 85vh;
 }
 
 .divambnom {
-    height: 80px;
+    height: 110px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +36,7 @@ body {
     border-top-right-radius: 60px;
 }
 
-.id {
+.id2 {
     margin-bottom: 10px;
     font-size: 20px;
     margin-bottom: -15px;
@@ -50,11 +48,32 @@ body {
     margin-bottom: 10px;
 }
 
+.linia {
+    width: 75%;
+}
+
 .divambtipus {
     display: flex;
     justify-content: space-around;
     text-transform: capitalize;
+    margin-bottom: -3px;
+    margin-top: -5px;
 }
+
+.tipus1 {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 20px 1px rgba(135, 135, 135, 0.75);
+}
+
+.tipus2 {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 20px 1px rgba(135, 135, 135, 0.75);
+}
+
 
 .descripcio {
     border-radius: 20px;
@@ -78,5 +97,33 @@ body {
     width: 15px;
 }
 
+/* ESTADÍSTIQUES */
+/* ESTADÍSTIQUES */
+/* ESTADÍSTIQUES */
+
 .divambstats {
+    margin-top: 10px;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    margin-bottom: -10px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.stat-bar-container {
+    flex: 1; /* Fa que la barra ocupi el 100% del contenidor */
+    height: 15px;
+    background-color: #eee;
+    margin-left: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.stat-bar {
+    height: 100%;
+    background-color: #859186; /* Puedes cambiar el color según prefieras */
+    border-radius: 5px;
 }

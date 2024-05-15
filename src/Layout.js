@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import AppBar from "./components/AppBar";
 
-const Layout = (n_gen, setN_gen) => {
+const Layout = ({n_gen, setN_gen}) => {
 
     return (
         <div>

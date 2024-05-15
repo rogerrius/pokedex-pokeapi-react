@@ -50,24 +50,21 @@ const PagPokemon = () => {
             {pokemon ? (
                     <div className="divambtot">
                         
-                        <div className='divambmoltsdivs'>
+                        <div className='divambmoltsdivs' style={ { backgroundColor: tipoColorDict[pokemon?.types[0]?.type?.name] }}>
                             <div className="divambfotos">
                                 <img className='fotospoke' src={pokemon.sprites.other.showdown.front_default} alt={pokemon.name} />
                             </div>
                             
                             <div className="tensada">
                                 <div className="divambnom">
-                                    <p className='noms'>{pokemon.name}</p>
+                                    <p className='noms'>{pokemon.name}</p>                                    
                                     <div className="buit"></div>
-                                    <p className="id"># {pokemon.id}</p>
+                                    <p className="id2"># {pokemon.id}</p>
                                 </div>
-
-                                <div className="divambID">
-                                </div>
-
+                                
                                 <div className="divambtipus">
-                                    <p className='tipus1'>{pokemon.types[0].type.name}</p>
-                                    <p className='tipus2'>{pokemon?.types[1]?.type?.name}</p>
+                                    <p className='tipus1' style={{ backgroundColor: tipoColorDict[pokemon?.types[0]?.type?.name] }}>{pokemon.types[0].type.name}</p>
+                                    {pokemon?.types[1]?.type?.name ? <p className='tipus2' style={{ backgroundColor: tipoColorDict[pokemon?.types[1]?.type?.name] }}>{pokemon?.types[1]?.type?.name}</p> : <></>}
                                 </div>
 
                                 <div className="descripcio">
@@ -87,14 +84,49 @@ const PagPokemon = () => {
                                     </p>
                                 </div>
 
+                                <br />
+                                <hr className="linia" />
+                                <br />
+                                
                                 <div className="divambstats">
-                                    <p className='stats'>Estadístiques</p>
-                                    <p className='stats'>HP: {pokemon.stats[0].base_stat}</p>
-                                    <p className='stats'>Attack: {pokemon.stats[1].base_stat}</p>
-                                    <p className='stats'>Defense: {pokemon.stats[2].base_stat}</p>
-                                    <p className='stats'>Sp. Atk: {pokemon.stats[3].base_stat}</p>
-                                    <p className='stats'>Sp. Def: {pokemon.stats[4].base_stat}</p>
-                                    <p className='stats'>Speed: {pokemon.stats[5].base_stat}</p>
+                                    <p className='statistics'>-- Statistics --</p>
+                                    <div className='stat'>
+                                        <p className='stats'><b>HP:</b> {pokemon.stats[0].base_stat}</p>
+                                        <div className='stat-bar-container'> 
+                                        <div className='stat-bar' style={{ width: `${pokemon.stats[0].base_stat / 1}%`, backgroundColor: tipoColorDict[pokemon?.types[0]?.type?.name] }}></div>
+                                        <div className="numerostat"> </div>
+                                        </div>
+                                    </div>
+                                    <div className='stat'>
+                                        <p className='stats'><b>Attack:</b> {pokemon.stats[1].base_stat}</p>
+                                        <div className='stat-bar-container'>
+                                        <div className='stat-bar' style={{ width: `${pokemon.stats[1].base_stat / 1}%`, backgroundColor: tipoColorDict[pokemon?.types[0]?.type?.name] }}></div>
+                                        </div>
+                                    </div>
+                                    <div className='stat'>
+                                        <p className='stats'><b>Defense:</b> {pokemon.stats[2].base_stat}</p>
+                                        <div className='stat-bar-container'>
+                                        <div className='stat-bar' style={{ width: `${pokemon.stats[2].base_stat / 1}%`, backgroundColor: tipoColorDict[pokemon?.types[0]?.type?.name] }}></div>
+                                        </div>
+                                    </div>
+                                    <div className='stat'>
+                                        <p className='stats'><b>Sp. Atk:</b> {pokemon.stats[3].base_stat}</p>
+                                        <div className='stat-bar-container'>
+                                        <div className='stat-bar' style={{ width: `${pokemon.stats[3].base_stat / 1}%`, backgroundColor: tipoColorDict[pokemon?.types[0]?.type?.name] }}></div>
+                                        </div>
+                                    </div>
+                                    <div className='stat'>
+                                        <p className='stats'><b>Sp. Def:</b> {pokemon.stats[4].base_stat}</p>
+                                        <div className='stat-bar-container'>
+                                        <div className='stat-bar' style={{ width: `${pokemon.stats[4].base_stat / 1}%`, backgroundColor: tipoColorDict[pokemon?.types[0]?.type?.name] }}></div>
+                                        </div>
+                                    </div>
+                                    <div className='stat'>
+                                        <p className='stats'><b>Speed:</b> {pokemon.stats[5].base_stat}</p>
+                                        <div className='stat-bar-container'>
+                                        <div className='stat-bar' style={{ width: `${pokemon.stats[5].base_stat / 1}%`, backgroundColor: tipoColorDict[pokemon?.types[0]?.type?.name] }}></div>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>

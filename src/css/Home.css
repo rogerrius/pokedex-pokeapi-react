@@ -47,7 +47,7 @@ body {
 }
 
 .id {
-    color: grey;
+    color: rgb(230, 230, 230);
     font-size: 14px;
 }
 
@@ -70,8 +70,7 @@ body {
     width: auto;
 }
 
-.tipus1 {
-    background-color: white;
+.tipus11 {
     width: auto;
     height: auto;
     border-radius: 10px;
@@ -81,12 +80,3 @@ body {
     padding: 3px;
 }
 
-.tipus2 {
-    width: auto;
-    height: auto;
-    border-radius: 10px;
-    border-color: black;
-    border-width: 1px;
-    border-style: ridge;
-    padding: 3px;
-}

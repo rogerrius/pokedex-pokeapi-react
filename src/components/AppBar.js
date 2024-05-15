@@ -1,6 +1,8 @@
 import React from 'react';
 import '../css/AppBar.css';
 
+// TO DO: FER QUE ELS BOTONS CANVIIN EL POKEMON SEGUENT O AL ANTERIOR A DINS DE PAGPOKEMON
+
 function AppBar({n_gen, setN_gen}) {
     
     function onClickSumar() {
