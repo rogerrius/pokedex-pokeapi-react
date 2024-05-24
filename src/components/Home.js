@@ -3,10 +3,15 @@
 import '../css/Home.css';
 import { useNavigate } from 'react-router-dom';
 
-const Home = ({n_gen, pokemon}) => {
+// TO DO: CANVIAR ELS TIPUS D'IMATGES DELS POKEMONS PER UN ALTRE QUE ES VEGIN TOTS ELS POKEMONS BÉ
+
+const Home = ({n_gen, pokemon, entradaPokemon, setEntradaPokemon, currentPokemonId, setCurrentPokemonId, shiny}) => {
 
     const navigate = useNavigate()
     const handlePokemonClick = (id) => {
+        setCurrentPokemonId(id);
+        console.log(currentPokemonId);
+        setEntradaPokemon(true);
         navigate(`/pokemon/${id}`);
     };
     
@@ -32,32 +37,34 @@ const Home = ({n_gen, pokemon}) => {
     };
 
     return (
-        <div className="Jutgol">
-            {pokemon ? (
-                pokemon.map((poke, index) => (
-                    <div className="Home" key={index} onClick={() => handlePokemonClick(poke.id)}>
-                        <div className="divcaixes" style={{ backgroundColor: tipoColorDict[poke.types[0].type.name] }}>
-                            <div className="divnom">
-                                <p className='nom'>{poke.name}</p>
-                                <div className='buit'></div>
-                                <p className="id">#{poke.id}</p>
-                            </div>
-                            <div className='divambdivs'>
-                                <div className="divfotos">
-                                    <img className='foto' src={poke.sprites.other.dream_world.front_default} alt={poke.name} />
+        <div className="Ferran">
+            <div className="Jutgol">
+                {pokemon ? (
+                    pokemon.map((poke, index) => (
+                        <div className="Home" key={index} onClick={() => handlePokemonClick(poke.id)}>
+                            <div className="divcaixes" style={{ backgroundColor: tipoColorDict[poke.types[0].type.name] }}>
+                                <div className="divnom">
+                                    <p className='nom'>{poke.name}</p>
+                                    <div className='buit'></div>
+                                    <p className="id">#{poke.id}</p>
                                 </div>
-                                <div className="divtipus">
-                                    {poke.types.map((i) => (
-                                        <p className='tipus11' style={{ backgroundColor: tipoColorDict[i.type.name] }} >{i.type.name}</p>
-                                    ))}
+                                <div className='divambdivs'>
+                                    <div className="divfotos">
+                                        <img className='foto' src={shiny ? poke.sprites.front_shiny : poke.sprites.front_default} alt={poke.name} />
+                                    </div>
+                                    <div className="divtipus">
+                                        {poke.types.map((i) => (
+                                            <p className='tipus11' style={{ backgroundColor: tipoColorDict[i.type.name] }} >{i.type.name}</p>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                ))
-            ) : (
-                <p>Carregant, esperi un moment...</p>
-            )}
+                    ))
+                ) : (
+                    <p>Carregant, esperi un moment...</p>
+                )}
+            </div>
         </div>
     );
 };

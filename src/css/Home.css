@@ -2,6 +2,12 @@ body {
     background-color: aliceblue;
 }
 
+.Ferran {
+    height: 85vh;
+    width: 100%;
+    overflow: scroll;
+}
+
 .Jutgol {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -56,9 +62,10 @@ body {
 }
 
 .foto {
-    max-height: 80px;
-    min-height: 80px;
-    max-width: 80px;
+    max-height: 120px;
+    min-height: 120px;
+    max-width: 120px;
+    margin: -20px;
 }
 
 .divtipus {

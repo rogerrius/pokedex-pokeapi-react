@@ -7,8 +7,12 @@ import { getElements } from './API';
 function App() {
   const [n_gen, setN_gen] = useState(0);
   const [pokemon, setPokemon] = useState([]);
-  const routing = useRoutes(routes(n_gen, setN_gen, pokemon));
-    
+  const [entradaPokemon, setEntradaPokemon] = useState(false);
+  const [currentPokemonId, setCurrentPokemonId] = useState(1);
+  const [shiny, setShiny] = useState(false);
+
+  const routing = useRoutes(routes(n_gen, setN_gen, pokemon, entradaPokemon, setEntradaPokemon, currentPokemonId, setCurrentPokemonId, shiny, setShiny));
+
   const gen = [
       'https://pokeapi.co/api/v2/pokemon?limit=151&offset=0',//1
       'https://pokeapi.co/api/v2/pokemon?limit=100&offset=151',//2
@@ -20,7 +24,6 @@ function App() {
       'https://pokeapi.co/api/v2/pokemon?limit=96&offset=809',//8
       'https://pokeapi.co/api/v2/pokemon?limit=120&offset=905'//9
   ]
-
 
   useEffect(() => {
       const getPokemon = async () => {
