@@ -1,5 +1,5 @@
-# PokeDex hecha con React
+# PokeDex made with React
 
-Aplicación web PokeDex para móviles programada en React que hace peticiones a pokeapi.co para mostrar la información de los Pokemon.
+PokeDex mobile web application programmed in React that makes requests to pokeapi.co to display Pokemon information.
 
 ![alt text](https://github.com/rogerrius/pokedex-pokeapi-react/blob/main/imgs/aio_pokedex.png)
